@@ -5,33 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/main.js"></script>
+    <script defer src="./js/variables.js"></script>
+    <script defer src="./js/clase.js"></script>
+    <script defer src="./js/main.js"></script>
     <title>Nodür | Macetas, muebles y portamacetas de madera y hierro artesanales.</title>
 </head>
 <body>
     <header>
-        <h1>¡Bienvenidos a Nodür!</h1>
+        <img class="logo" src="assets/logo.png" alt="logo">
+        <button class="carrito_btn" id="carrito"><img class="carrito_img" src="./assets/cart.png" alt="carrito"></button>
     </header>
     <main>
+        <h1>¡Bienvenidos a Nodür!</h1>
         <h2>Observa nuestros modelos disponibles:</h2>
         <div class="main">
             <div class="main_card">
                 <h3>Maceta Jardinera</h3>
-                <img src="./assets/1.jpg" alt="Maceta Jardinera">
-                <p>Desde $1500</p>
+                <div class="card-div">
+                    <img class="card__img" src="./assets/1.jpg" alt="Maceta Jardinera">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>CODIGO</th>
+                                <th>ARTICULO</th>
+                                <th>TAMAÑO</th>
+                                <th>PESO</th>
+                                <th>PRECIO</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Jardinera standard</td>
+                                <td>70 x 20 x 20 cm</td>
+                                <td>10</td>
+                                <td>1100</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jardinera standard grande</td>
+                                <td>90 x 20 x 20 cm</td>
+                                <td>14</td>
+                                <td>1400</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
             <div class="main_card">
                 <h3>Maceta Jardinera Colgante</h3>
-                <img src="./assets/2.jpg" alt="Maceta Jardinera Colgante">
-                <p>Desde $1800</p>
+                <div class="card-div">
+                    <img class="card__img" src="./assets/2.jpg" alt="Maceta Jardinera Colgante">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>CODIGO</th>
+                                <th>ARTICULO</th>
+                                <th>TAMAÑO</th>
+                                <th>PESO</th>
+                                <th>PRECIO</th>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Jardinera colgante</td>
+                                <td>40 x 20 x 20 cm</td>
+                                <td>6</td>
+                                <td>1000</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Jardinera colgante larga</td>
+                                <td>60 x 20 x 20 cm</td>
+                                <td>8</td>
+                                <td>1200</td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
             </div>
+
             <div class="main_card">
                 <h3>Maceta Cubo</h3>
-                <img src="./assets/3.jpg" alt="Maceta Cubo">
-                <p>Desde $1900</p>
+                <div class="card-div">
+                    <img class="card__img" src="./assets/3.jpg" alt="Maceta Cubo">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>CODIGO</th>
+                                <th>ARTICULO</th>
+                                <th>TAMAÑO</th>
+                                <th>PESO</th>
+                                <th>PRECIO</th>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Maceta cubo</td>
+                                <td>40 x 40 x 40 cm</td>
+                                <td>14</td>
+                                <td>1400</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Maceta cubo grande</td>
+                                <td>60 x 60 x 60 cm</td>
+                                <td>17</td>
+                                <td>1800</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+        
         </div>
-        <p class="funcion"> Ingresa la función <b>encargarMaceta()</b> en la consola.</p>
+        <p class="funcion"> Ingresa la función <b>seleccionarProductos()</b> en la consola, o haz click en el carrito.</p>
     </main>
     <footer>
         <section>
