@@ -1,62 +1,17 @@
-let botonCarrito = document.querySelector("button.carrito_btn")
-botonCarrito.addEventListener('click', ()=> {seleccionarProductos();});
-
-function seleccionarProductos(){
-    let codigo = prompt(mensajeInicial)
-        if (isNaN(parseInt((codigo))) && codigo !== null){
-            alert("Ingresaste un codigo inválido.")
-            let otroIntento = confirm("¿Deseas volver a intentarlo?")
-            if (otroIntento){
-                seleccionarProductos()
-            } else {
-                return alert("Cerraste la seleccion de productos. Los productos ya agregados permaneceran en tu carrito por 3(tres) días.") 
-            }
-        }
-        else if (codigo === null){
-            return alert("Cerraste la seleccion de productos. Los productos ya agregados permaneceran en tu carrito por 3(tres) días.") 
-        } else {
-            let macetaElegida = seleccionarMaceta(codigo)
-            carrito.push(macetaElegida)
-            alert(`Has agregado ${macetaElegida.nombre} al carrito.`)
-            let seguirComprando = confirm(`¿Deseas agregar más productos a tu carrito?`)
-                if (seguirComprando){
-                    seleccionarProductos()
-                }else{
-                    finalizarCompra()
-                }
-        }
+const toast = (text, destination) => {
+        Toastify ({
+            text: text,
+            duration: 3500,
+            destination: destination,
+            newWindow: true,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true, 
+        }).showToast()
 }
 
 
-function seleccionarMaceta(codigo){
-    let macetaEncontrada = macetas.find(maceta => maceta.codigo === parseInt(codigo))
-    if (macetaEncontrada === undefined){
-        alert("El codigo que ingresaste no coincide con ninguno de nuestros productos. Intentalo de nuevo.")
-        seleccionarProductos()
-    } else {
-        return macetaEncontrada
-    }
-}
-
-
-function finalizarCompra(){
-
-    if (carrito.length === 0){
-        console.warn("Tu carrito aún está vacio.")
-        return
-    }
-    
-    let envio = confirm("¿Deseas solicitar el envio de tu(s) producto(s) a tu hogar?")
-    const nuevaCompra = new Compra(carrito, envio, null, null)
-    nuevaCompra.calcularEnvio()
-    nuevaCompra.calcularPrecioTotal()
-    let confirmar = confirm(`Has seleccionado ${nuevaCompra.carrito.length} producto(s).\n`+
-                            `El monto por envio es de $ ${nuevaCompra.precioEnvio}.\n`+
-                            `El monto total a pagar es de $ ${nuevaCompra.precioTotal}.\n` +
-                            `¿Deseas confirmar el pago?`)
-    nuevaCompra.confirmarCompra(confirmar)
-    carrito.length = 0
-}
 
 
 
