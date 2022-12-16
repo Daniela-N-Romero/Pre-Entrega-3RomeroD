@@ -32,31 +32,34 @@
                 <tr class="thead-row green">
                     <th>Producto</th>
                     <th>Precio por unidad</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th></th>
+
                 </tr>
             </thead>
             <tbody class="tbody">
-                <tr class="tbody-row">
-                    <td class="producto">....</td>
-                    <td class="precio-unidad">....</td>
-                </tr>
+
             </tbody>
             <tfoot class="tfoot">
                 <tr class="tfoot-row">
-                    <td class="green" colspan="1">Envio seleccionado por los productos:</td>
-                    <td class="envio"></td>
+                    <td class="green" colspan="3">Envio seleccionado por los productos:</td>
+                    <td class="envio">0</td>
+                    <td></td>
                 </tr>
                 <tr class="tfoot-row">
-                    <td class="green" colspan="1">Total:</td>
-                    <td class="total"></td>
+                    <td class="green" colspan="3">Total:</td>
+                    <td class="total">0</td>
+                    <td></td>
                 </tr>
             </tfoot>
         </table>
         <form class="form-radio">
             <span>¿Deseas sumar el envio a tus productos?</span>
-            <input type="radio" name="envio" class="input btnEnvioSi" value="true" checked>Si</input>
-            <input type="radio" name="envio" class="input btnEnvioNo" value="false">No</input>
+            <input type="radio" name="envio" class="input btnEnvioSi" value="true">Si</input>
+            <input type="radio" name="envio" class="input btnEnvioNo" value="false" checked>No</input>
         </form>
-        <button class="button confirm">Confirmar compra</button>
+        <button class="button confirm ">Confirmar compra</button>
     </div>
     </main>
     <footer>

@@ -4,3 +4,6 @@ const tdEnvioPrecio = document.querySelector("td.envio")
 const totalCarrito = document.querySelector("td.total")
 const sectionCards = document.querySelector("section.cards")
 
+
+
+

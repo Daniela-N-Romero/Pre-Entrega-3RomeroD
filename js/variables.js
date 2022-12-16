@@ -1,17 +1,7 @@
-
 const carrito = JSON.parse(localStorage.getItem("carritoActual")) || []
-
-const productos = [ { codigo: 1, nombre: 'Maceta cubo', imagen: '../assets/1.jpg',  altimg: 'Maceta con forma de cubo', tamaño: '50cm x 50 cm', peso: 14, precio: 2000, descripcion: 'Maceta ideal para plantas de gran tamaño. Su interior permite que una amplia cantidad de tierra sea el lugar adecuado para las plantas más grandes. Medidas: 50cm x 50 cm.'},
-                { codigo: 2, nombre: 'Maceta jardinera colgante', imagen: '../assets/2.jpg',  altimg: 'Maceta jardinera colgante con herrajes de hierro', tamaño: '60cm x 15 cm', peso: 6, precio: 1700, descripcion: 'Nuestra jardinera colgante es ideal para balcones o paredes. Cuentan con herrajes que sirven para colocarlas donde quieras. Recordá: los herrajes pueden ser hechos a medida para mejor adaptabilidad. Medidas: 60cm x 15 cm.'},
-                { codigo: 3, nombre: 'Maceta para cactus', imagen: '../assets/3.jpg', altimg: 'Maceta pequeña para cactus', tamaño: '12cm x 12cm', peso: 1, precio: 700, descripcion: 'Maceta pequeña, ideal para cactus o suculentas. Su tamaño es perfecto para decorar el centro de tu mesa o mesita de luz. Medidas: 12cm x 12cm.'},
-                { codigo: 4, nombre: 'Jardinera standard', imagen: '../assets/4.jpg',  altimg: 'Maceta jardinera común de 70 centimetros', tamaño: '70 x 20 x 20 cm', peso: 7, precio: 1500, descripcion: 'Nuestra maceta jardinera es de las más elegidas por nuestros clientes, que desean darle un lugar especial a sus plantas más lindas. Además, muchos las eligen para hacer huertas en hogares pequeños. Recordá: podes pedir tamaños personalizados. Medidas: 70cm x 20cm.'},
-                { codigo: 5, nombre: 'Portamacetas "Hogar"', imagen: '../assets/9.jpg',  altimg: 'Portamacetas con forma de casa', tamaño: '50cm x 40cm', peso: 6, precio: 1400, descripcion: 'Portamacetas "Hogar" con forma de casas. Contienen pequeñas macetas y estantes para pequeñas plantas. Medidas: 50cm x 40cm.'},
-                { codigo: 6, nombre: 'Portamacetas de pie', imagen: '../assets/10.jpg',  altimg: 'Portamacetas de pie', tamaño: '95Cm x 56cm', peso: 9, precio: 2200, descripcion: 'Portamacetas de pie perfecto para cactus y suculentas. Apto para interior y exterior. ¡Entran 15 macetas aproximadamente! Medidas:95Cm x 56cm. Cuenta con patas para poder apoyarlo donde quieras.'},
-                { codigo: 7, nombre: 'Portamacetas Colgante', imagen: '../assets/11.jpg',  altimg: 'Portamacetas colgante', tamaño: '95Cm x 56cm', peso: 9, precio: 2200, descripcion: 'Portamacetas colgante de pino perfecto para cactus y suculentas. Apto para interior y exterior. ¡Entran 15 macetas aproximadamente! Medidas:95Cm x 56cm.'},                
-                { codigo: 8, nombre: 'Portamacetas Hexágono', imagen: '../assets/12.jpg',  altimg: 'Portamacetas hexágono', tamaño: '35cm', peso: 3, precio: 1500, descripcion: 'Hexágono macetero de 35cm de diámetro. Su interior se encuentra impermeabilizado y es apto para contener la tierra de tus plantas. También posee orificios de drenaje. Medida: 35cm.'},]
-
-
+const productos = []
 const envioMinimo = 750
-const adicionalXKilo = 75
-
+const envioMaximo = 5550
+const adicionalXKilo = 25
+const baseDeDatos = "../basededatos.json"
 

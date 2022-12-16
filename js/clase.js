@@ -15,8 +15,10 @@ class Compra {
         if (this.envio === true){
                 if (this.calcularPesoTotal() < 15){
                     return this.precioEnvio = envioMinimo
-                } else if (this.calcularPesoTotal() > 15){
+                } else if (this.calcularPesoTotal() < 100){
                     return this.precioEnvio = envioMinimo + (this.calcularPesoTotal() * adicionalXKilo)
+                } else if (this.calcularPesoTotal() > 100){
+                    return this.precioEnvio = envioMaximo
                 } else{
                     return this.precioEnvio = 0
                 }
@@ -27,7 +29,7 @@ class Compra {
 
     calcularPrecioTotal(){
         if (this.carrito.length > 0){
-            let precioTotal = (this.carrito.reduce((acc, maceta)=> acc + maceta.precio, 0)) + this.precioEnvio
+            let precioTotal = (this.carrito.reduce((acc, maceta)=> acc + maceta.precioXCantidad, 0)) + this.precioEnvio
             return this.precioTotal = precioTotal
         } else {
             return this.precioTotal = 0
