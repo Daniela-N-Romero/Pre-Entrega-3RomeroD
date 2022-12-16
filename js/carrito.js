@@ -48,11 +48,11 @@ const envioSi = document.querySelector("input.input.btnEnvioSi")
 const envioNo = document.querySelector("input.input.btnEnvioNo")
 
 const envioClick = () =>{
-    envioNo.addEventListener("change", (e)=>{
+    envioNo.addEventListener("change", ()=>{
         envio= false
         calcularCompra()
     })
-    envioSi.addEventListener("change", (e)=>{
+    envioSi.addEventListener("change", ()=>{
         envio= true
         calcularCompra()
     })
